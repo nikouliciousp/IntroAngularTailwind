@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class MyHelloComponent {
   // Component name
-  componentName = 'MyHelloComponent';
+  componentName = 'My Hello Component';
 
   // Image properties
   imageURL = 'https://angular.io/assets/images/logos/angular/angular.png';

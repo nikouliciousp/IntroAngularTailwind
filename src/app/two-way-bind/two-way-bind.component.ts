@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class TwoWayBindComponent {
   // Component name
-  componentName = 'TwoWayBindComponent';
+  componentName = 'Two Way Bind Component';
 
   // User input
   userInput = '';

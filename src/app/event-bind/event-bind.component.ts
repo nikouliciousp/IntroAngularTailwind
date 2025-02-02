@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class EventBindComponent {
   // Component name
-  componentName = 'EventBindComponent';
+  componentName = 'Event Bind Component';
 
   // Click counter
   times = 0;
