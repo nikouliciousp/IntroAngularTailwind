@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { User } from '../comp-input.component';
 
 @Component({
   selector: 'app-second-table',
@@ -8,4 +9,11 @@ import { Component } from '@angular/core';
 export class SecondTableComponent {
   // Compomemt Name
   componentName = 'Second Table Component';
+
+  @Input() userData: User[] = [];
+  @Output() deleteUser = new EventEmitter<number>();
+
+  onDeleteUser(i: number) {
+    this.deleteUser.emit(i);
+  }
 }

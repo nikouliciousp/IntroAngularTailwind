@@ -2,6 +2,9 @@
   <h4 class="m-0 bg-blue-300 p-2">{{ componentName }}</h4>
   <div class="border border-2 border-primary-subtle p-3 m-3 text-center">
     <app-simple-table></app-simple-table>
-    <app-second-table></app-second-table>
+    <app-second-table
+      (deleteUser)="onDeleteUser($event)"
+      [userData]="userData"
+    ></app-second-table>
   </div>
 </div>
