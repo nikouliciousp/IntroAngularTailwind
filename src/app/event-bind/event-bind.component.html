@@ -1,0 +1,22 @@
+<div class="border border-2 border-success m-3 text-center bg-green-100">
+  <h4 class="m-0 bg-green-200 p-2">{{ componentName }}</h4>
+  <div
+    class="border border-2 border-success-subtle p-3 m-3 text-center flex flex-row justify-content-around"
+  >
+    <div class="row">
+      <div class="col btn">
+        <button (click)="onButtonClick()" class="btn bg-success">
+          Count Clicks
+        </button>
+      </div>
+      <div class="col btn">
+        <button (click)="onResetClick()" class="btn bg-danger">
+          Reset Count
+        </button>
+      </div>
+      <div class="col m-0">
+        Button clicked <strong>{{ times }}</strong> times
+      </div>
+    </div>
+  </div>
+</div>

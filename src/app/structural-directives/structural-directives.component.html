@@ -1,0 +1,38 @@
+<div class="border border-2 border-danger m-3 text-center bg-red-100">
+  <h4 class="m-0 bg-red-300 p-2">{{ componentName }}</h4>
+  <div class="border border-2 border-danger-subtle p-3 m-3 text-center">
+    <div class="row g-3 align-items-center justify-content-center">
+      <div *ngIf="paragraphVisible" class="col-md-4">
+        {{ paragraph }}
+      </div>
+      <div class="col-md-4">
+        <button
+          class="btn btn-danger text-white w-100"
+          (click)="toggleParagraph()"
+        >
+          {{ paragraphVisible ? "Hide" : "Show" }} Paragraph
+        </button>
+      </div>
+    </div>
+    <div class="p-3 m-3">
+      <table class="table table-bordered table-danger">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody class="table-light">
+          <tr *ngFor="let user of userData">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name.first }}</td>
+            <td>{{ user.name.last }}</td>
+            <td>{{ user.age }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

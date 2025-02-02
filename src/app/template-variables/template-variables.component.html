@@ -1,0 +1,25 @@
+<div
+  class="border border-2 border-secondary m-3 text-center bg-body-secondary-200"
+>
+  <h4 class="m-0 bg-body-secondary p-2">{{ componentName }}</h4>
+  <div class="border border-2 border-secondary-subtle p-3 m-3 text-center">
+    <div class="row g-3 align-items-center justify-content-center">
+      <div class="col-12 col-md-6">
+        <input
+          #userInput
+          type="text"
+          class="form-control"
+          placeholder="Enter text here"
+        />
+      </div>
+      <div class="col-12 col-md-4">
+        <button
+          class="btn btn-secondary text-white w-100"
+          (click)="log(userInput.value); clearInput(userInput)"
+        >
+          Console Log
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
