@@ -13,7 +13,7 @@ export class AppComponent {
     { text: 'My Hello', path: 'my-hello' },
     { text: 'Two Way Bind', path: 'two-way-bind' },
     { text: 'Event Bind', path: 'event-bind' },
-    { text: 'Structural Directives', path: 'sructural-directives' },
+    { text: 'Structural Directives', path: 'structural-directives' },
     { text: 'Templates Variables', path: 'templates-variables' },
     { text: 'Comp Input', path: 'comp-input' },
   ];
