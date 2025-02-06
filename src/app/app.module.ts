@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'my-hello', component: MyHelloComponent },
   { path: 'two-way-bind', component: TwoWayBindComponent },
   { path: 'event-bind', component: EventBindComponent },
-  { path: 'sructural-directives', component: StructuralDirectivesComponent },
+  { path: 'structural-directives', component: StructuralDirectivesComponent },
   { path: 'templates-variables', component: TemplateVariablesComponent },
   { path: 'comp-input', component: CompInputComponent },
   { path: '', component: WelcomeComponent },

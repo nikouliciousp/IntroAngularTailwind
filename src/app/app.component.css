@@ -1,0 +1,12 @@
+.list-group-item-action.active {
+    background-color: rgb(33, 99, 243);
+    color: rgb(222, 236, 21);
+}
+
+.list-group-horizontal .list-group-item {
+    flex: 1 1 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

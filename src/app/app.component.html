@@ -1,4 +1,4 @@
-<div class="border border-2 border-primary p-3 m-3 text-center">
+<!-- <div class="border border-2 border-primary p-3 m-3 text-center">
   <h1>
     Welcome to<br />
     <strong class="text-primary">{{ title }} Components</strong>
@@ -21,4 +21,80 @@
 <app-two-way-bind></app-two-way-bind>
 <app-structural-directives></app-structural-directives>
 <app-template-variables></app-template-variables>
-<app-comp-input></app-comp-input>
+<app-comp-input></app-comp-input> -->
+
+<div class="container mt-4 text-center">
+  <nav
+    class="p-2 navbar navbar-light bg-light justify-content-between rounded-4 shadow-sm mb-4"
+  >
+    <span class="navbar-brand">
+      {{ title }}
+    </span>
+    <span> Coding from Home </span>
+  </nav>
+  <div class="row justify-content-center">
+    <div class="col-md-12 table-responsive">
+      <div class="list-group list-group-horizontal justify-content-center">
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="list-group-item list-group-item-action"
+        >
+          Home
+        </a>
+        <a
+          routerLink="/my-hello"
+          routerLinkActive="active"
+          class="list-group-item list-group-item-action"
+        >
+          My Hello
+        </a>
+        <a
+          routerLink="/two-way-bind"
+          routerLinkActive="active"
+          class="list-group-item list-group-item-action"
+        >
+          Two Way Bind
+        </a>
+        <a
+          routerLink="/event-bind"
+          routerLinkActive="active"
+          class="list-group-item list-group-item-action"
+        >
+          Event Bind
+        </a>
+        <a
+          routerLink="/structural-directives"
+          routerLinkActive="active"
+          class="list-group-item list-group-item-action"
+        >
+          Structural Directives
+        </a>
+        <a
+          routerLink="/templates-variables"
+          routerLinkActive="active"
+          class="list-group-item list-group-item-action"
+        >
+          Templates Variables
+        </a>
+        <a
+          routerLink="/comp-input"
+          routerLinkActive="active"
+          class="list-group-item list-group-item-action"
+        >
+          Comp Input
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4 justify-content-center">
+    <div class="col-12">
+      <div class="card shadow-sm mx-auto">
+        <div class="card-body">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
