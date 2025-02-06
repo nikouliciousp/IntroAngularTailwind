@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { MyHelloComponent } from './my-hello/my-hello.component';
@@ -12,6 +13,19 @@ import { TemplateVariablesComponent } from './template-variables/template-variab
 import { CompInputComponent } from './comp-input/comp-input.component';
 import { SimpleTableComponent } from './comp-input/simple-table/simple-table.component';
 import { SecondTableComponent } from './comp-input/second-table/second-table.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+const routes: Routes = [
+  { path: 'my-hello', component: MyHelloComponent },
+  { path: 'two-way-bind', component: TwoWayBindComponent },
+  { path: 'event-bind', component: EventBindComponent },
+  { path: 'sructural-directives', component: StructuralDirectivesComponent },
+  { path: 'templates-variables', component: TemplateVariablesComponent },
+  { path: 'comp-input', component: CompInputComponent },
+  { path: '', component: WelcomeComponent },
+  { path: '**', component: PageNotFoundComponent },
+];
 
 @NgModule({
   declarations: [
@@ -24,8 +38,10 @@ import { SecondTableComponent } from './comp-input/second-table/second-table.com
     CompInputComponent,
     SimpleTableComponent,
     SecondTableComponent,
+    WelcomeComponent,
+    PageNotFoundComponent,
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
   providers: [],
   bootstrap: [AppComponent],
 })
