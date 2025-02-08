@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SideBar } from './app.interfaces';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ export class AppComponent {
   title = 'Angular Intro Examples';
 
   sideBarMenu: SideBar[] = [
+    { text: 'Welcome', path: 'welcome' },
     { text: 'My Hello', path: 'my-hello' },
     { text: 'Two Way Bind', path: 'two-way-bind' },
     { text: 'Event Bind', path: 'event-bind' },
@@ -17,4 +19,13 @@ export class AppComponent {
     { text: 'Templates Variables', path: 'templates-variables' },
     { text: 'Comp Input', path: 'comp-input' },
   ];
+
+  currentPath = '';
+
+  constructor(private router: Router) {
+    this.router.events.subscribe(() => {
+      console.log(this.router.url.substring(1));
+      this.currentPath = this.router.url.substring(1);
+    });
+  }
 }

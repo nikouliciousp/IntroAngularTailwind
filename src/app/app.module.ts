@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'structural-directives', component: StructuralDirectivesComponent },
   { path: 'templates-variables', component: TemplateVariablesComponent },
   { path: 'comp-input', component: CompInputComponent },
-  { path: '', component: WelcomeComponent },
+  { path: 'welcome', component: WelcomeComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

@@ -9,7 +9,7 @@ import { SideBar } from '../app.interfaces';
 export class AboveBarComponent {
   @Input() menu: SideBar[] = [];
 
-  active = 'greeting';
+  @Input() active = 'greeting';
 
   onClick(path: string) {
     this.active = path;
