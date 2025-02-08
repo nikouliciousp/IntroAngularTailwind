@@ -18,6 +18,7 @@ export class AppComponent {
     { text: 'Structural Directives', path: 'structural-directives' },
     { text: 'Templates Variables', path: 'templates-variables' },
     { text: 'Comp Input', path: 'comp-input' },
+    { text: 'Chuck Norris', path: 'chuck-norris' },
   ];
 
   currentPath = '';

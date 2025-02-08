@@ -1,0 +1,15 @@
+<div class="border border-2 border-warning m-3 text-center bg-yellow-100">
+  <h4 class="m-0 bg-yellow-300 p-2">{{ componentName }}</h4>
+  <div class="border border-2 border-warning-subtle p-3 m-3 text-center">
+    <div class="row g-3 align-items-center justify-content-center">
+      <div class="col-md-8">
+        <p>{{ joke }}</p>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-warning" (click)="fetchJoke()">
+          Get Another Joke
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

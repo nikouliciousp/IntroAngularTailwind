@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { MyHelloComponent } from './my-hello/my-hello.component';
@@ -16,15 +17,18 @@ import { SecondTableComponent } from './comp-input/second-table/second-table.com
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AboveBarComponent } from './above-bar/above-bar.component';
+import { ChuckNorrisComponent } from './chuck-norris/chuck-norris.component';
 
 const routes: Routes = [
+  { path: 'welcome', component: WelcomeComponent },
+  { path: '', component: WelcomeComponent },
   { path: 'my-hello', component: MyHelloComponent },
   { path: 'two-way-bind', component: TwoWayBindComponent },
   { path: 'event-bind', component: EventBindComponent },
   { path: 'structural-directives', component: StructuralDirectivesComponent },
   { path: 'templates-variables', component: TemplateVariablesComponent },
   { path: 'comp-input', component: CompInputComponent },
-  { path: 'welcome', component: WelcomeComponent },
+  { path: 'chuck-norris', component: ChuckNorrisComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 
@@ -42,8 +46,14 @@ const routes: Routes = [
     WelcomeComponent,
     PageNotFoundComponent,
     AboveBarComponent,
+    ChuckNorrisComponent,
   ],
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
