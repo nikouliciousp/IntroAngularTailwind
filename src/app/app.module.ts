@@ -15,6 +15,7 @@ import { SimpleTableComponent } from './comp-input/simple-table/simple-table.com
 import { SecondTableComponent } from './comp-input/second-table/second-table.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AboveBarComponent } from './above-bar/above-bar.component';
 
 const routes: Routes = [
   { path: 'my-hello', component: MyHelloComponent },
@@ -40,6 +41,7 @@ const routes: Routes = [
     SecondTableComponent,
     WelcomeComponent,
     PageNotFoundComponent,
+    AboveBarComponent,
   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
   providers: [],

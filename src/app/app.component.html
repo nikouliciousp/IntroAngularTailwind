@@ -23,7 +23,7 @@
 <app-template-variables></app-template-variables>
 <app-comp-input></app-comp-input> -->
 
-<div class="container mt-4 text-center">
+<!-- <div class="container mt-4 text-center">
   <nav
     class="p-2 navbar navbar-light bg-light justify-content-between rounded-4 shadow-sm mb-4"
   >
@@ -88,6 +88,27 @@
       </div>
     </div>
   </div>
+  <div class="row mt-4 justify-content-center">
+    <div class="col-12">
+      <div class="card shadow-sm mx-auto">
+        <div class="card-body">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container mt-4 text-center">
+  <nav
+    class="p-2 navbar navbar-light bg-light justify-content-between rounded-4 shadow-sm mb-4"
+  >
+    <span class="navbar-brand">
+      {{ title }}
+    </span>
+    <span> Coding from Home </span>
+  </nav>
+  <app-above-bar [menu]="sideBarMenu"></app-above-bar>
   <div class="row mt-4 justify-content-center">
     <div class="col-12">
       <div class="card shadow-sm mx-auto">
