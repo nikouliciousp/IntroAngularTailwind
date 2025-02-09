@@ -1,14 +1,5 @@
 import { Component } from '@angular/core';
-
-// User Interface
-export interface User {
-  id: number;
-  name: {
-    first: string;
-    last: string;
-  };
-  age: number;
-}
+import { User } from '../app.interfaces';
 
 @Component({
   selector: 'app-comp-input',
@@ -32,3 +23,4 @@ export class CompInputComponent {
     this.userData.splice(index, 1);
   }
 }
+export { User };
