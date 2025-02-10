@@ -42,8 +42,14 @@ export class ReactiveFormsComponent {
         Validators.minLength(8),
       ]),
     },
-    matchValidator('password', 'repeatPassword')
+    { validators: this.passwordMatchValidator }
   );
+
+  passwordMatchValidator(group: AbstractControl): ValidationErrors | null {
+    const password = group.get('password')?.value;
+    const repeatPassword = group.get('repeatPassword')?.value;
+    return password === repeatPassword ? null : { passwordMismatch: true };
+  }
 
   onSubmit() {
     if (!this.form.valid) {
