@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { User } from '../app.interfaces';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-template-form',
@@ -10,20 +11,33 @@ export class TemplateFormComponent {
   // Component name
   componentName = 'Template Form Component';
 
+  @ViewChild(NgForm) form!: NgForm;
   users: User[] = [];
   userIdCounter = 1;
 
-  onSubmit(form: any) {
+  onSubmit(form: NgForm) {
+    if (!form.valid) {
+      return; // Αν η φόρμα δεν είναι έγκυρη, δεν κάνουμε τίποτα
+    }
+
     const formValue = form.value;
+
+    // Έλεγχος για κενές τιμές
+    if (!formValue.first?.trim() || !formValue.last?.trim() || !formValue.age) {
+      return;
+    }
+
     const newUser: User = {
       id: this.userIdCounter++,
       name: {
-        first: formValue.first,
-        last: formValue.last,
+        first: formValue.first.trim(),
+        last: formValue.last.trim(),
       },
       age: formValue.age,
     };
+
     this.users.push(newUser);
-    form.reset(); // Reset the form after submission
+
+    form.resetForm(); // Reset φόρμας
   }
 }
