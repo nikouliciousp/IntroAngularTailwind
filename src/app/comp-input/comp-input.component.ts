@@ -18,9 +18,15 @@ export class CompInputComponent {
     { id: 5, name: { first: 'Michael', last: 'Brown' }, age: 45 },
   ];
 
+  receivedUser: User | undefined;
+
   onDeleteUser(index: number) {
     console.log(index);
     this.userData.splice(index, 1);
+  }
+
+  onSendUser(user: User) {
+    this.receivedUser = user;
   }
 }
 export { User };

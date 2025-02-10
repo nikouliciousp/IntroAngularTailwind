@@ -12,8 +12,13 @@ export class SecondTableComponent {
 
   @Input() userData: User[] = [];
   @Output() deleteUser = new EventEmitter<number>();
+  @Output() sendUser = new EventEmitter<User>();
 
   onDeleteUser(i: number) {
     this.deleteUser.emit(i);
+  }
+
+  onSendUser(user: User) {
+    this.sendUser.emit(user);
   }
 }
