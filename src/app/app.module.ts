@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -20,6 +20,7 @@ import { AboveBarComponent } from './above-bar/above-bar.component';
 import { ChuckNorrisComponent } from './chuck-norris/chuck-norris.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { SimpleTableNullComponent } from './simple-table-null/simple-table-null.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 const routes: Routes = [
   { path: 'welcome', component: WelcomeComponent },
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'templates-variables', component: TemplateVariablesComponent },
   { path: 'comp-input', component: CompInputComponent },
   { path: 'template-form', component: TemplateFormComponent },
+  { path: 'reactive-forms', component: ReactiveFormsComponent },
   { path: 'chuck-norris', component: ChuckNorrisComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
@@ -52,6 +54,7 @@ const routes: Routes = [
     ChuckNorrisComponent,
     TemplateFormComponent,
     SimpleTableNullComponent,
+    ReactiveFormsComponent,
   ],
   imports: [
     BrowserModule,

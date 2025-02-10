@@ -19,6 +19,7 @@ export class AppComponent {
     { text: 'Templates Variables', path: 'templates-variables' },
     { text: 'Template Form', path: 'template-form' },
     { text: 'Comp Input', path: 'comp-input' },
+    { text: 'Reactive Forms', path: 'reactive-forms' },
     { text: 'Chuck Norris', path: 'chuck-norris' },
   ];
 
