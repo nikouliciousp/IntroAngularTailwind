@@ -1,0 +1,41 @@
+<div class="border border-2 border-success m-3 text-center bg-green-100">
+  <h4 class="m-0 bg-green-300 p-2">{{ componentName }}</h4>
+  <div class="border border-2 border-success-subtle p-3 m-3 text-center">
+    <div class="row g-3 align-items-center justify-content-center">
+      <div class="col-md-8">
+        <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+          <p>
+            <label for="first" class="form-label">
+              <strong>First Name</strong>
+            </label>
+            <input type="text" name="first" class="form-control" ngModel />
+          </p>
+          <p>
+            <label for="last" class="form-label">
+              <strong>Last Name</strong>
+            </label>
+            <input type="text" name="last" class="form-control" ngModel />
+          </p>
+          <p>
+            <label for="age" class="form-label">
+              <strong>Age</strong>
+            </label>
+            <input type="number" name="age" class="form-control" ngModel />
+          </p>
+          <p>
+            <button type="submit" class="btn btn-success w-100 m-2 mb-0">
+              Submit
+            </button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="border border-2 border-success-subtle p-3 m-3 text-center">
+    <div class="row g-3 align-items-center justify-content-center">
+      <div class="col-md-8">
+        <app-simple-table-null [userData]="users"></app-simple-table-null>
+      </div>
+    </div>
+  </div>
+</div>

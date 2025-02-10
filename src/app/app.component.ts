@@ -17,6 +17,7 @@ export class AppComponent {
     { text: 'Event Bind', path: 'event-bind' },
     { text: 'Structural Directives', path: 'structural-directives' },
     { text: 'Templates Variables', path: 'templates-variables' },
+    { text: 'Template Form', path: 'template-form' },
     { text: 'Comp Input', path: 'comp-input' },
     { text: 'Chuck Norris', path: 'chuck-norris' },
   ];

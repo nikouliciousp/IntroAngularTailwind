@@ -18,6 +18,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AboveBarComponent } from './above-bar/above-bar.component';
 import { ChuckNorrisComponent } from './chuck-norris/chuck-norris.component';
+import { TemplateFormComponent } from './template-form/template-form.component';
+import { SimpleTableNullComponent } from './simple-table-null/simple-table-null.component';
 
 const routes: Routes = [
   { path: 'welcome', component: WelcomeComponent },
@@ -28,6 +30,7 @@ const routes: Routes = [
   { path: 'structural-directives', component: StructuralDirectivesComponent },
   { path: 'templates-variables', component: TemplateVariablesComponent },
   { path: 'comp-input', component: CompInputComponent },
+  { path: 'template-form', component: TemplateFormComponent },
   { path: 'chuck-norris', component: ChuckNorrisComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
@@ -47,6 +50,8 @@ const routes: Routes = [
     PageNotFoundComponent,
     AboveBarComponent,
     ChuckNorrisComponent,
+    TemplateFormComponent,
+    SimpleTableNullComponent,
   ],
   imports: [
     BrowserModule,
