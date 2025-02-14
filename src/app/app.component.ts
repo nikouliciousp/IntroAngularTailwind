@@ -11,16 +11,19 @@ export class AppComponent {
   title = 'Angular Intro Examples';
 
   sideBarMenu: SideBar[] = [
-    { text: 'Welcome', path: 'bind-examples/welcome' },
-    { text: 'My Hello', path: 'bind-examples/my-hello' },
-    { text: 'Two Way Bind', path: 'bind-examples/two-way-bind' },
-    { text: 'Event Bind', path: 'bind-examples/event-bind' },
     { text: 'Structural Directives', path: 'structural-directives' },
     { text: 'Templates Variables', path: 'templates-variables' },
     { text: 'Template Form', path: 'template-form' },
     { text: 'Comp Input', path: 'comp-input' },
     { text: 'Reactive Forms', path: 'reactive-forms' },
     { text: 'Chuck Norris', path: 'chuck-norris' },
+  ];
+
+  bindExamplesMenu: SideBar[] = [
+    { text: 'Welcome', path: 'bind-examples/welcome' },
+    { text: 'My Hello', path: 'bind-examples/my-hello' },
+    { text: 'Two Way Bind', path: 'bind-examples/two-way-bind' },
+    { text: 'Event Bind', path: 'bind-examples/event-bind' },
   ];
 
   currentPath = '';

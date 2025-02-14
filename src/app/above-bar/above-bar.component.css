@@ -5,11 +5,23 @@
 }
 
 /* Adjust the position of the dropdown menu for smaller screens */
-@media (max-width: 300px) {
+@media (max-width: 500px) {
     .dropdown-menu-left {
         left: 0;
         /* Ensure the dropdown menu is fully visible on small screens */
         right: 0;
         /* Center the dropdown menu on small screens */
     }
+}
+
+/* Custom styles for the submenu */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu:hover .dropdown-menu {
+    display: block;
+    top: 0;
+    left: -93%;
+    margin-top: -8px;
 }
