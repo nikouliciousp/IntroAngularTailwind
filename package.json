@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --output-path docs --base-href github.io/angular-intro-examples/",
+    "build:prod": "ng build --output-path docs --base-href https://nikouliciousp.github.io/IntroAngularTailwind/angular-intro-examples",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
