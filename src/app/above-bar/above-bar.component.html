@@ -1,16 +1,32 @@
-<div class="row justify-content-center">
-  <div class="col-md-12 table-responsive">
-    <div class="list-group list-group-horizontal justify-content-center">
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Menu</a>
+    <div class="dropdown">
       <a
-        (click)="onClick(item.path)"
-        *ngFor="let item of menu"
-        routerLink="{{ item.path }}"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="list-group-item list-group-item-action"
+        class="nav-link dropdown-toggle"
+        href="#"
+        id="navbarDropdownMenuLink"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
       >
-        {{ item.text }}
+        Menu
       </a>
+      <ul
+        class="dropdown-menu dropdown-menu-left"
+        aria-labelledby="navbarDropdownMenuLink"
+      >
+        <li *ngFor="let item of menu">
+          <a
+            class="dropdown-item"
+            [routerLink]="item.path"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            {{ item.text }}
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
-</div>
+</nav>
