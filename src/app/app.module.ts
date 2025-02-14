@@ -18,6 +18,7 @@ import { ChuckNorrisComponent } from './chuck-norris/chuck-norris.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { SimpleTableNullComponent } from './simple-table-null/simple-table-null.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { WelcomeComponent } from './bind-examples/welcome/welcome.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,7 @@ const routes: Routes = [
         (m) => m.BindExamplesModule
       ),
   },
+  { path: '', component: WelcomeComponent },
   { path: 'structural-directives', component: StructuralDirectivesComponent },
   { path: 'templates-variables', component: TemplateVariablesComponent },
   { path: 'comp-input', component: CompInputComponent },
