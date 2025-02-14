@@ -11,10 +11,10 @@ export class AppComponent {
   title = 'Angular Intro Examples';
 
   sideBarMenu: SideBar[] = [
-    { text: 'Welcome', path: 'welcome' },
-    { text: 'My Hello', path: 'my-hello' },
-    { text: 'Two Way Bind', path: 'two-way-bind' },
-    { text: 'Event Bind', path: 'event-bind' },
+    { text: 'Welcome', path: 'bind-examples/welcome' },
+    { text: 'My Hello', path: 'bind-examples/my-hello' },
+    { text: 'Two Way Bind', path: 'bind-examples/two-way-bind' },
+    { text: 'Event Bind', path: 'bind-examples/event-bind' },
     { text: 'Structural Directives', path: 'structural-directives' },
     { text: 'Templates Variables', path: 'templates-variables' },
     { text: 'Template Form', path: 'template-form' },
