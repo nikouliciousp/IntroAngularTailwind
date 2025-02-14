@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { SideBar } from '../app.interfaces';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-above-bar',
@@ -24,5 +25,17 @@ export class AboveBarComponent {
 
   closeDropdown() {
     this.isDropdownOpen = false;
+  }
+
+  constructor(private router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.isSubMenuActive();
+      }
+    });
+  }
+
+  isSubMenuActive(): boolean {
+    return this.subMenu.some((item) => this.router.isActive(item.path, true));
   }
 }

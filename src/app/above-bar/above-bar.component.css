@@ -25,3 +25,15 @@
     left: -93%;
     margin-top: -8px;
 }
+
+/* Highlight the active submenu item */
+.dropdown-item.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Highlight the active submenu */
+.dropdown-submenu.active>.dropdown-item {
+    background-color: #007bff;
+    color: white;
+}

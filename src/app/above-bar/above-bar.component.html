@@ -16,7 +16,7 @@
         class="dropdown-menu dropdown-menu-left"
         aria-labelledby="navbarDropdownMenuLink"
       >
-        <li class="dropdown-submenu">
+        <li class="dropdown-submenu" [ngClass]="{ active: isSubMenuActive() }">
           <a
             class="dropdown-item dropdown-toggle"
             href="#"
